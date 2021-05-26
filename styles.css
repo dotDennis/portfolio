@@ -2,8 +2,21 @@
   --primary: #161719;
   --accent: #90c362;
   --link: #1e6d81;
-  --off-white: #ededec;
+  --secondary: #ededec;
   --warn: #f93343;
+  --icon-primary: rgb(236, 187, 54);
+  --icon-secondary: rgba(236, 187, 54);
+  --icon-secondary-opacity: 0.6;
+  --ease: cubic-bezier(0.45, 0.25, 0.60, 0.95);
+}
+
+:root.dark-mode {
+  --primary: #ededec;
+  --link: #9e4fc2;
+  --secondary: #161719;
+  --icon-primary: rgb(236, 187, 54);
+  --icon-secondary: rgb(124, 54, 236);
+  --icon-secondary-opacity: 1;
 }
 
 html {
@@ -23,41 +36,73 @@ html {
 body {
   margin: 0;
   padding: 0;
-  background-color: var(--off-white);
+  background-color: var(--secondary);
   color: var(--primary);
+  --fa-secondary-color: var(--icon-secondary);
+  --fa-primary-color: var(--icon-primary);
+  --fa-secondary-opacity: var(--icon-secondary-opacity);
   height: 100%;
+  transition: all 0.3s var(--ease);
 }
 
 /* Style content */
 h1 {
   position: absolute;
-  top: 100px;
+  top: 2%;
   left: 50%;
   transform: translateX(-50%);
 }
 
 main {
   display: flex;
+  flex-direction: column;
   width: 80%;
-  height: 100%;
+  margin: 5rem auto;
+  padding-bottom: 1rem;
   gap: 1rem;
-  margin: 0 auto;
-  align-items: center;
 }
 
 main section {
   width: 100%;
   padding: 1rem;
-  /* outline: grey 2px solid; */
+  margin: 3rem 0;
+  /* outline: 1px solid red; */
 }
 
-.top img {
+.top {
+  display: flex;
+  flex-direction: column;
   width: 100%;
+}
+
+.img-container {
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+.img-container:hover {
+  transform: translateY(-7px);
+  transition: transform 0.3s ease;
+}
+
+.img-container img {
+  width: 100%;
+  max-height: 500px;
   object-fit: cover;
   border-radius: 5px;
-  border: 1px solid var(--primary);
+  border: 0.1px solid var(--primary);
   cursor: pointer;
 }
+
+.img-container a {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 2;
+}
+
 
 .bottom {
   display: flex;
@@ -72,9 +117,42 @@ main section {
 }
 
 /* Toggle dark mode */
-.dark-mode {
-  position: absolute;
-  top: 50px;
-  left: 50%;
-  transform: translateX(-50%);
+.btn-toggle {
+  position: fixed;
+  top: 1%;
+  right: 1%;
+  font-size: 2rem;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.switch {
+  animation: switch 0.6s var(--ease);
+}
+
+
+@keyframes switch {
+  0% {
+    transform: rotate(0deg);
+    opacity: 1;
+  }
+  50% {
+    transform: rotate(180deg);
+    opacity: 0.2;
+  }
+  100% {
+    transform: rotate(360deg);
+    opacity: 1;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  main {
+    height: 100%;
+    flex-direction: row;
+    align-items: center;
+    margin: 0 auto;
+    padding: 0;
+  }
 }

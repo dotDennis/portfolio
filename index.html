@@ -7,20 +7,24 @@
     <title>Dennis Løvold</title>
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet" />
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/4f128aceb8.js" crossorigin="anonymous"></script>
     <!-- Styling -->
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <button class="dark-mode">toggle dark mode</button>
+    <button aria-label="Toggle Dark Mode" class="btn-toggle">
+      <i class="fad fa-sun"></i>
+    </button>
     <h1>W.I.P</h1>
     <main>
       <section>
         <div class="top">
-          <img src="img/CrossCourse-cropped.png" alt="placeholder" />
+          <div class="img-container">
+            <img src="img/CrossCourse-cropped.png" alt="placeholder" />
+            <a href="https://dennis-gamehub-v2.netlify.app/" target="_blank" rel="noreferrer"></a>
+          </div>
           <h2>Cross-Course Project</h2>
           <p>Lorem ipsum dolor, sit amet consectetur adipisicing.</p>
         </div>
@@ -31,7 +35,10 @@
       </section>
       <section>
         <div class="top">
-          <img src="img/SemesterProject-cropped.png" alt="placeholder" />
+          <div class="img-container">
+            <img src="img/SemesterProject-cropped.png" alt="placeholder" />
+            <a href="https://dennisl.netlify.app/" target="_blank" rel="noreferrer"></a>
+          </div>
           <h2>Semester Project 1</h2>
           <p>Lorem ipsum, dolor sit amet consectetur adipisicing.</p>
         </div>
@@ -42,7 +49,10 @@
       </section>
       <section>
         <div class="top">
-          <img src="img/ProjectExam1-cropped.png" alt="placeholder" />
+          <div class="img-container">
+            <img src="img/ProjectExam1-cropped.png" alt="placeholder" />
+            <a href="https://dennis-projectexam.netlify.app/" target="_blank" rel="noreferrer"></a>
+          </div>
           <h2>Project Exam 1</h2>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
         </div>
@@ -52,5 +62,6 @@
         </div>
       </section>
     </main>
+    <script src="script.js"></script>
   </body>
 </html>
