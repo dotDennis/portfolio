@@ -1,30 +1,32 @@
 :root {
-  --primary: #161719;
-  --accent: #90c362;
-  --link: #1e6d81;
+  --primary: #212121;
   --secondary: #ededec;
-  --warn: #f93343;
-  --icon-primary: rgb(236, 187, 54);
-  --icon-secondary: rgba(236, 187, 54);
+  --link: blue;
+  --accent: var(--primary);
+  --icon-primary: #ecbb36;
+  --icon-secondary: #ffbc6b;
   --icon-secondary-opacity: 0.6;
   --ease: cubic-bezier(0.45, 0.25, 0.60, 0.95);
+  --weight-title: 700;
+  --weight-lesser: 300;
 }
 
 :root.dark-mode {
   --primary: #ededec;
-  --link: #9e4fc2;
-  --secondary: #161719;
-  --icon-primary: rgb(236, 187, 54);
-  --icon-secondary: rgb(124, 54, 236);
+  --secondary: #212121;
+  --accent: #ffbc6b;
+  --link: #ff846b;
+  --icon-primary: #ecbb36;
+  --icon-secondary: #7c36ec;
   --icon-secondary-opacity: 1;
 }
 
 
 html {
   scroll-behavior: smooth;
-  font-family: "Roboto", sans-serif;
   box-sizing: border-box;
   font-size: 16px;
+  line-height: 1.3;
 }
 
 *,
@@ -42,16 +44,33 @@ body {
   --fa-primary-color: var(--icon-primary);
   --fa-secondary-opacity: var(--icon-secondary-opacity);
   transition: all 0.3s var(--ease);
+  font-family: "Roboto Condensed", sans-serif;
 }
+
 
 /* Style content */
 h1 {
-  font-family: "Roboto", sans-serif;
-  font-weight: 900;
-letter-spacing: 10px;
+  font-size: 3rem;
+  letter-spacing: 3px;
   left: 50%;
   text-align: center;
   margin-top: 7rem;
+  font-weight: var(--weight-title);
+}
+
+h2 {
+  font-family: 'Eczar', serif;
+  font-weight: var(--weight-lesser);
+  color: var(--accent);
+  margin-bottom: 1rem;
+  font-size: 1.75rem;
+  transition: color 0.3s ease;
+}
+
+p {
+  font-weight: var(--weight-lesser);
+  letter-spacing: 1px;
+  font-size: 17px;
 }
 
 main {
@@ -110,10 +129,13 @@ main section {
 }
 
 .bottom a {
-  font: 400 16px "Roboto", sans-serif;
+  font-family: "Eczar", sans-serif;
+  font-weight: var(--weight-lesser);
+  font-size: 16px;
+  letter-spacing: 1px;
   padding: 0;
   color: var(--link);
-  text-decoration: none;
+  text-underline-offset: 2px;
 }
 
 /* Toggle dark mode */
