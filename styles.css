@@ -24,7 +24,6 @@ html {
   font-family: "Roboto", sans-serif;
   box-sizing: border-box;
   font-size: 16px;
-  height: 100%;
 }
 
 *,
@@ -41,31 +40,31 @@ body {
   --fa-secondary-color: var(--icon-secondary);
   --fa-primary-color: var(--icon-primary);
   --fa-secondary-opacity: var(--icon-secondary-opacity);
-  height: 100%;
   transition: all 0.3s var(--ease);
 }
 
 /* Style content */
 h1 {
-  position: absolute;
-  top: 2%;
+  font-family: "Roboto", sans-serif;
+  font-weight: 900;
+letter-spacing: 10px;
   left: 50%;
-  transform: translateX(-50%);
+  text-align: center;
+  margin-top: 7rem;
 }
 
 main {
   display: flex;
   flex-direction: column;
   width: 80%;
-  margin: 5rem auto;
-  padding-bottom: 1rem;
+  margin: 0 auto 2rem auto;
   gap: 1rem;
 }
 
 main section {
   width: 100%;
   padding: 1rem;
-  margin: 3rem 0;
+  margin: 1rem 0 2rem 0;
   /* outline: 1px solid red; */
 }
 
@@ -149,10 +148,10 @@ main section {
 
 @media screen and (min-width: 1000px) {
   main {
-    height: 100%;
+    margin-top: 4rem;
+    width: 90%;
     flex-direction: row;
     align-items: center;
-    margin: 0 auto;
     padding: 0;
   }
 }
