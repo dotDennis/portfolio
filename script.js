@@ -10,14 +10,23 @@ const sunSVG = `<svg aria-hidden="true" focusable="false" data-prefix="fad" data
 // false = light mode, true = dark mode
 const prefersDarkMode = window.matchMedia("(prefers-color-scheme: dark)");
 
-const currentTheme = localStorage.getItem("theme");
+let currentTheme = localStorage.getItem("theme");
+
+
+if (!currentTheme) {
+  if (prefersDarkMode.matches) {
+    currentTheme = "dark";
+  } else if (!prefersDarkMode.matches) {
+    currentTheme = "light";
+  }
+}
 
 if (currentTheme == "dark") {
   document.documentElement.classList.add("dark-mode");
   darkMode.innerHTML = moonSVG;
 } else if (currentTheme == "light") {
   document.documentElement.classList.remove("dark-mode");
-darkMode.innerHTML = sunSVG
+  darkMode.innerHTML = sunSVG
 }
 
 darkMode.addEventListener("click", toggleMode);
