@@ -32,26 +32,20 @@ if (currentTheme == "dark") {
 darkMode.addEventListener("click", toggleMode);
 
 function toggleMode() {
-  if (prefersDarkMode.matches) {
-    var theme = document.documentElement.classList.contains("dark-mode") ? "light" : "dark";
-  } else {
-    var theme = document.documentElement.classList.contains("dark-mode") ? "light" : "dark";
-  }
+  darkMode.disabled = true;
+  var theme = document.documentElement.classList.contains("dark-mode") ? "light" : "dark";
   localStorage.setItem("theme", theme);
 
   if (theme === "dark") {
     setTimeout(() => {
       document.documentElement.classList.toggle("dark-mode");
       darkMode.innerHTML = moonSVG
-
     }, animationChange);
     addSwitch();
   } else {
     setTimeout(() => {
       document.documentElement.classList.toggle("dark-mode");
       darkMode.innerHTML = sunSVG
-
-
     }, animationChange);
     addSwitch();
   }
@@ -65,5 +59,7 @@ function addSwitch() {
 function removeSwitch() {
   setTimeout(function () {
     darkMode.classList.remove("switch");
+  darkMode.disabled = false;
+
   }, animationDuration);
 }
