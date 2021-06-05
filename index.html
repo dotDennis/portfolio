@@ -5,71 +5,95 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dennis Løvold</title>
-    <meta name="description" content="Description goes here">
-    <meta author="Dennis S. Løvold">
+    <meta name="description" content="Description goes here" />
+    <meta author="Dennis S. Løvold" />
     <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Eczar:wght@400;600&family=Roboto+Condensed:wght@300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Eczar:wght@400;600&family=Roboto+Condensed:wght@300;400&display=swap" rel="stylesheet" />
 
     <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/4f128aceb8.js" crossorigin="anonymous"></script>
     <!-- Styling -->
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="styles/index.css" />
   </head>
   <body>
-    <button aria-label="Toggle Dark Mode" class="btn-toggle">
-      <svg class="svg-inline--fa fa-sun fa-w-16" data-icon="sun" aria-hidden="true" focusable="false" data-prefix="fad" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg="">
-        <g class="fa-group">
-          <path class="fa-secondary" fill="currentColor" d="M509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"></path>
-          <path class="fa-primary" fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1z"></path>
-        </g>
-      </svg>
-    </button>
+    <header>
+      <button class="button__toggle" aria-label="Toggle color theme">
+        <svg
+          class="svg-inline--fa fa-sun fa-w-16"
+          data-icon="sun"
+          aria-hidden="true"
+          focusable="false"
+          data-prefix="fad"
+          role="img"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 512 512"
+          data-fa-i2svg=""
+          style="margin-right: 3px"
+        >
+          <g class="fa-group">
+            <path
+              class="fa-secondary"
+              fill="currentColor"
+              d="M509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"
+            ></path>
+            <path
+              class="fa-primary"
+              fill="currentColor"
+              d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1z"
+            ></path>
+          </g>
+        </svg>
+      </button>
+    </header>
     <h1>Dennis Løvold</h1>
-    <main>
-      <section>
-        <div class="top">
-          <div class="img-container">
+    <main class="flex">
+      <section class="flex__containers">
+        <div class="flex__top">
+          <div class="flex__image">
             <img src="img/CrossCourse-cropped.png" alt="Fill in alt text here" />
-            <a aria-label="View the cross-course project" href="https://dennis-gamehub-v2.netlify.app/" target="_blank" rel="noreferrer"></a>
+            <a aria-label="Read about the project" href="crosscourse.html"></a>
           </div>
           <h2>Cross-Course Project</h2>
           <p>Lorem ipsum dolor, sit amet consectetur adipisicing.</p>
         </div>
-        <div class="bottom">
-          <a href="#">Read more</a>
-          <a href="https://dennis-gamehub-v2.netlify.app/" target="_blank" rel="noreferrer">View website</a>
+        <div class="flex__bottom">
+          <a href="crosscourse.html">Read more</a>
+          <a href="https://gamehub.dennisl.no" target="_blank" rel="noreferrer">View website</a>
         </div>
       </section>
-      <section>
-        <div class="top">
-          <div class="img-container">
+      <section class="flex__containers">
+        <div class="flex__top">
+          <div class="flex__image">
             <img src="img/SemesterProject-cropped.png" alt="Fill in alt text here" />
-            <a aria-label="View the semester project" href="https://dennisl.netlify.app/" target="_blank" rel="noreferrer"></a>
+            <a aria-label="Read about the project" href="semesterproject.html"></a>
           </div>
           <h2>Semester Project 1</h2>
           <p>Lorem ipsum, dolor sit amet consectetur adipisicing.</p>
         </div>
-        <div class="bottom">
-          <a href="#">Read more</a>
+        <div class="flex__bottom">
+          <a href="semesterproject.html">Read more</a>
           <a href="https://dennisl.netlify.app/" target="_blank" rel="noreferrer">View website</a>
         </div>
       </section>
-      <section>
-        <div class="top">
-          <div class="img-container">
+      <section class="flex__containers">
+        <div class="flex__top">
+          <div class="flex__image">
             <img src="img/ProjectExam1-cropped.png" alt="Fill in alt text here" />
-            <a aria-label="View the exam project" href="https://dennis-projectexam.netlify.app/" target="_blank" rel="noreferrer"></a>
+            <a aria-label="Read about the project" href="exam.html"></a>
           </div>
           <h2>Project Exam 1</h2>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
         </div>
-        <div class="bottom">
-          <a href="#">Read more</a>
+        <div class="flex__bottom">
+          <a href="exam.html">Read more</a>
           <a href="https://dennis-projectexam.netlify.app/" target="_blank" rel="noreferrer">View website</a>
         </div>
       </section>
     </main>
-    <script src="script.js" defer></script>
+    <footer>
+      <p>&copy; Copyright 2021 <strong>Dennis Løvold</strong>. All rights reserved.</p>
+    </footer>
+    <script src="darkMode.js" defer></script>
   </body>
 </html>

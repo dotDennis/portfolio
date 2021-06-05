@@ -1,0 +1,55 @@
+@import url(global.css);
+
+.button__return {
+  margin-top: 7px; /* magic number to align with toggle button*/
+  font-size: 2rem;
+  border: none;
+  background: none;
+  cursor: pointer;
+  color: var(--primary);
+}
+
+.container {
+  display: flex;
+  flex-flow: column nowrap;
+  width: 90%;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.container__top {
+  text-align: center;
+  width: 100%;
+}
+
+.container__image {
+  width: 100%;
+  margin-bottom: 1rem;
+  border-radius: 5px;
+}
+
+.container__top a {
+  margin: 0 1rem;
+}
+
+.container__subtitle {
+  color: var(--tone);
+}
+
+.container__bottom {
+  margin-top: 5rem;
+  text-align: center;
+  margin-bottom: -5rem;
+}
+
+.container__bottom a {
+  margin: 0 1rem 0 0;
+}
+
+/* make sure the dark mode toggle never overlaps text. */
+
+@media screen and (min-width: 900px) {
+  p {
+    padding-right: 0;
+  }
+}
