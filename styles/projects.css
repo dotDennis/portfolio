@@ -22,14 +22,36 @@
   width: 100%;
 }
 
+.container__top a {
+  margin: 0 1rem;
+}
+
+.container__image--container {
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+.container__image--container a {
+  position: absolute;
+  width: 100%;
+  height: calc(100% - 1rem);
+  border-radius: 5px;
+  top: 0;
+  left: 0;
+  margin: 0;
+}
+
 .container__image {
   width: 100%;
   margin-bottom: 1rem;
   border-radius: 5px;
+  box-shadow: var(--shadow);
+  opacity: var(--opacity);
 }
 
-.container__top a {
-  margin: 0 1rem;
+.container__image--container:hover {
+  transform: translateY(-7px);
+  transition: transform 0.3s ease;
 }
 
 .container__subtitle {

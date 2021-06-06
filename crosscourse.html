@@ -49,68 +49,78 @@
     <h1>Cross-Course Project</h1>
     <main class="container">
       <div class="container__top">
-        <img class="container__image" src="img/CrossCourse-cropped.png" alt="" />
-        <a href="https://gamehub.dennisl.no" target="_blank" rel="noreferrer">View website</a
-        ><a href="https://github.com/dotDennis/Gamehub-2.0" target="_blank" rel="noreferrer">View source</a>
+        <div class="container__image--container">
+          <img
+            class="container__image"
+            src="img/cross-course"
+            alt="Cross-course project, featuring 'GameHub', dark themed website with an orange accent."
+          />
+          <a aria-label="Go to the cross-course website" href="https://gamehub.dennisl.no/" target="_blank" rel="noreferrer"></a>
+        </div>
+        <a href="https://gamehub.dennisl.no" target="_blank" rel="noreferrer">View website</a>
+        <a href="https://github.com/dotDennis/Gamehub-2.0" target="_blank" rel="noreferrer">View source</a>
       </div>
       <section class="container__intro">
         <h2 class="container__title">Introduction</h2>
         <p>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto, soluta nisi ipsum magnam, veritatis quidem unde at repudiandae earum
-          ducimus dolorem reprehenderit beatae ab, rerum quasi velit amet odio distinctio aspernatur alias maiores hic nemo dignissimos cumque! Saepe
-          nemo laborum eius at a tempora, ipsum, quidem dolorem eveniet neque recusandae! Aliquid accusantium, beatae cumque nam eaque, esse,
-          excepturi iusto in sunt quasi explicabo nobis itaque doloribus quisquam commodi amet minus corrupti quibusdam! Temporibus dolores, possimus
-          accusantium labore maiores sunt deleniti animi beatae dolor asperiores atque, nostrum doloremque voluptate nisi debitis! Recusandae quis
-          alias porro? Asperiores vitae ipsam recusandae sed fugit. Quae suscipit, deleniti sunt numquam sapiente assumenda porro enim maiores veniam.
-          Omnis repellat, iste non cum dignissimos tempora temporibus fugit!
+          To revamp the cross-course project was quite the task. Having spent approx 5 days designing & coding my portfolio page, a complete revamp
+          would not be possible. The most crucial part of this project, is the store. So re-creating the API took some time, due to the shear amount
+          of details I originally put in it. I have not touched the design much on this project, mainly adding styling to areas missing it. The
+          project was quite the mess when I started, and therefor it became my focus area; to clean up the code.
         </p>
       </section>
       <section class="container__changes">
         <h2 class="container__title">Changes</h2>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta ratione inventore illum dolores reprehenderit, aliquam quasi ducimus commodi
-          totam veniam corporis necessitatibus eaque officia animi, consectetur nobis? Sapiente, porro autem. Quia iste et molestias sed dolore
-          maiores dolorum sapiente officiis eligendi ullam, voluptate quasi itaque.
+          The revamp includes changes to file naming, element naming (BEM naming), user experience (removing unused links), compressing images,
+          improving javascript, improving accessibility, introducing the 'about' page, recreating the API, more consistency in styling, defering
+          non-crucial javascript, adding error messages etc.
         </p>
         <div class="container__bullets">
-          <h3 class="container__subtitle">Lorem, ipsum dolor.</h3>
+          <h3 class="container__subtitle">BEM naming</h3>
           <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi voluptatum, quam quas id quos eveniet. Laboriosam nostrum culpa quia
-            doloremque? Dolores similique voluptatem sint aperiam quisquam reprehenderit laudantium delectus ex ut exercitationem, illo nobis
-            consequatur molestiae ad iure expedita culpa quae. Suscipit repudiandae dignissimos, doloribus ratione nostrum quae, inventore deleniti
-            qui nulla, labore aut. Quas itaque aliquam nihil voluptates modi.
+            This is the largest chunk I got done this week. I watched several YouTube videos on naming conventions for HTML & CSS, and decided to go
+            for BEM naming. BEM naming does not give any large improvements to vanilla CSS, but in the future it might be easier - or by using SCSS.
+            My naming has been poor on previous projects & therefor a lot of styles have had to be rewritten several times, I therefor tried to clean
+            up naming & set a standard for my future namings. This was therefor mainly for practice, and I didn't quite finish all pages with BEM
+            naming. Pages touched has their "max-width" media queries turned into "min-width" instead (focusing on mobile-first).
           </p>
         </div>
         <div class="container__bullets">
-          <h3 class="container__subtitle">Lorem, ipsum.</h3>
+          <h3 class="container__subtitle">Remove unused links</h3>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam reprehenderit nostrum temporibus placeat eligendi culpa quo possimus nobis
-            sequi, quaerat, laudantium, blanditiis voluptatibus nam quae!
+            This wasn't as simple as removing a few anchor tags. My footer was fluttered with 10-15 tags that linked to non-existent pages. Sure they
+            all linked to an error 404 page, but they were terrible for the user experience. If I went to a site like that, I'd leave within seconds,
+            im sure of it. I removed my footer entierly, and remade it with a some simple copyright text instead. The sell page was something I never
+            got to do, and after spending so much time on the BEM naming, I decided to replace it with an About page that follows the same design as
+            the products page. Though the design 100% should've gotten a complete overhaul.
           </p>
         </div>
         <div class="container__bullets">
-          <h3 class="container__subtitle">Lorem, ipsum dolor.</h3>
+          <h3 class="container__subtitle">Compressed images</h3>
           <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi voluptatum, quam quas id quos eveniet. Laboriosam nostrum culpa quia
-            doloremque? Dolores similique voluptatem sint aperiam quisquam reprehenderit laudantium delectus ex ut exercitationem, illo nobis
-            consequatur molestiae ad iure expedita culpa quae. Suscipit repudiandae dignissimos, doloribus ratione nostrum quae, inventore deleniti
-            qui nulla, labore aut. Quas itaque aliquam nihil voluptates modi.
+            The load time on my buy games page is quite long, having 4 different sections all load at once, with 3*6 games + 1 category with all 18
+            games. Without having to touch the original design of the page, the only solution to decrease this load time, was to minimize the images.
+            Therefor all images got compressed & converted to .WEBP format
           </p>
         </div>
         <div class="container__bullets">
-          <h3 class="container__subtitle">Lorem, ipsum.</h3>
+          <h3 class="container__subtitle">Improved javascript</h3>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam reprehenderit nostrum temporibus placeat eligendi culpa quo possimus nobis
-            sequi, quaerat, laudantium, blanditiis voluptatibus nam quae!
+            Using resources from previous projects & altering them to work with my project. This is the way the contact form was made & how my module
+            files were made. Having finally learnt how to use the "import/export syntax" during the project exam, I saw no reason as to why I
+            shouldn't use it on this project aswell. Using the import syntax made me able to clean up a ton of the javascript, making it a tiny tad
+            easier to read & more expandable.
           </p>
         </div>
         <div class="container__bullets">
-          <h3 class="container__subtitle">Lorem, ipsum dolor.</h3>
+          <h3 class="container__subtitle">Improved accessibility</h3>
           <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi voluptatum, quam quas id quos eveniet. Laboriosam nostrum culpa quia
-            doloremque? Dolores similique voluptatem sint aperiam quisquam reprehenderit laudantium delectus ex ut exercitationem, illo nobis
-            consequatur molestiae ad iure expedita culpa quae. Suscipit repudiandae dignissimos, doloribus ratione nostrum quae, inventore deleniti
-            qui nulla, labore aut. Quas itaque aliquam nihil voluptates modi.
+            I made sure to add some alt-text on 'ALL' images (where applicable), so that everyone knows what's being displayed. Images weren't the
+            only concern. Having being introduced to Google's Lighthouse application by Kasper (during the our exam), it gave me a tremendous amount
+            of information. All my anchor tags including links, yeah those were not really accessible, what's the narrator going to read? (the answer
+            is nonsense). So adding aria-labels to my anchor tags was done on every single page. Including all links overlapping images which has no
+            visual effect, but were linking to specific posts.
           </p>
         </div>
       </section>

@@ -49,74 +49,71 @@
     <h1>Semester Project</h1>
     <main class="container">
       <div class="container__top">
-        <img class="container__image" src="img/SemesterProject-cropped.png" alt="" />
-        <a href="https://semester-project.dennisl.no" target="_blank" rel="noreferrer">View website</a
-        ><a href="https://github.com/dotDennis/Semester-Project" target="_blank" rel="noreferrer">View source</a>
+        <div class="container__image--container">
+          <img
+            class="container__image"
+            src="img/semester"
+            alt="Musum website, 'Community Science Musem', dark themed website with a slight tint of orange."
+          />
+          <a aria-label="Go to the semester project website" href="https://csm.dennisl.no/" target="_blank" rel="noreferrer"></a>
+        </div>
+        <a href="https://csm.dennisl.no" target="_blank" rel="noreferrer">View website</a>
+        <a href="https://github.com/dotDennis/Semester-Project" target="_blank" rel="noreferrer">View source</a>
       </div>
       <section class="container__intro">
         <h2 class="container__title">Introduction</h2>
         <p>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto, soluta nisi ipsum magnam, veritatis quidem unde at repudiandae earum
-          ducimus dolorem reprehenderit beatae ab, rerum quasi velit amet odio distinctio aspernatur alias maiores hic nemo dignissimos cumque! Saepe
-          nemo laborum eius at a tempora, ipsum, quidem dolorem eveniet neque recusandae! Aliquid accusantium, beatae cumque nam eaque, esse,
-          excepturi iusto in sunt quasi explicabo nobis itaque doloribus quisquam commodi amet minus corrupti quibusdam! Temporibus dolores, possimus
-          accusantium labore maiores sunt deleniti animi beatae dolor asperiores atque, nostrum doloremque voluptate nisi debitis! Recusandae quis
-          alias porro? Asperiores vitae ipsam recusandae sed fugit. Quae suscipit, deleniti sunt numquam sapiente assumenda porro enim maiores veniam.
-          Omnis repellat, iste non cum dignissimos tempora temporibus fugit!
+          The Semester Project... Yes! This project was quite stable and I were not focusing on it too much, though I should've spent more time adding
+          the events to an API & create event specific pages. I mainly went over the page with Google Lighthouse and improved the SEO & accessibility.
+          All my images were already below, or around 200kb, so I didn't touch these on this project. After getting the most important factors away, I
+          went to moodle & read the feedback I recived. Reading it I found a few more improvements avaliable to do, with enough avaliable time, I
+          added the changes.
         </p>
       </section>
       <section class="container__changes">
         <h2 class="container__title">Changes</h2>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta ratione inventore illum dolores reprehenderit, aliquam quasi ducimus commodi
-          totam veniam corporis necessitatibus eaque officia animi, consectetur nobis? Sapiente, porro autem. Quia iste et molestias sed dolore
-          maiores dolorum sapiente officiis eligendi ullam, voluptate quasi itaque.
+          The revamp includes changes to accessibility, user experience (changes to CTAs), contact form validation & sending, more consistency in
+          styling (fixed margin on pages, instead of a % margin), adding error messages etc.
         </p>
         <div class="container__bullets">
-          <h3 class="container__subtitle">Lorem, ipsum dolor.</h3>
+          <h3 class="container__subtitle">Contact form</h3>
           <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi voluptatum, quam quas id quos eveniet. Laboriosam nostrum culpa quia
-            doloremque? Dolores similique voluptatem sint aperiam quisquam reprehenderit laudantium delectus ex ut exercitationem, illo nobis
-            consequatur molestiae ad iure expedita culpa quae. Suscipit repudiandae dignissimos, doloribus ratione nostrum quae, inventore deleniti
-            qui nulla, labore aut. Quas itaque aliquam nihil voluptates modi.
+            The largest change, is the contact form, which I connected to the Gamehub WP REST API 'Contact 7' plugin, with a different ID (so I'm able
+            to differentiate the emails I recieve). Using the same script as the Exam & Gamehub, the user gets feedback if information is incorrectly
+            entered &/or there's an error while sending. If the form is successful I'll recieve it on my email, and can reachout to the person sending
+            it. (As mentioned in my Exam, I do not send a "confirmation" email, as the form can be filled out with any email.)
           </p>
         </div>
         <div class="container__bullets">
-          <h3 class="container__subtitle">Lorem, ipsum.</h3>
+          <h3 class="container__subtitle">Prominent CTAs</h3>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam reprehenderit nostrum temporibus placeat eligendi culpa quo possimus nobis
-            sequi, quaerat, laudantium, blanditiis voluptatibus nam quae!
+            The feedback mentioned my CTAs not being 'attention-grabbing', and I 100% agree. My buttons were bland and dissapeared into the
+            background. They're now colored accordingly to the accent color (orange), and has a bold font weight. User will now be more attracted to
+            the buttons, and there's a higher chance they'll end up in a flow.
           </p>
         </div>
         <div class="container__bullets">
-          <h3 class="container__subtitle">Lorem, ipsum dolor.</h3>
+          <h3 class="container__subtitle">SEO & Accessibility</h3>
           <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi voluptatum, quam quas id quos eveniet. Laboriosam nostrum culpa quia
-            doloremque? Dolores similique voluptatem sint aperiam quisquam reprehenderit laudantium delectus ex ut exercitationem, illo nobis
-            consequatur molestiae ad iure expedita culpa quae. Suscipit repudiandae dignissimos, doloribus ratione nostrum quae, inventore deleniti
-            qui nulla, labore aut. Quas itaque aliquam nihil voluptates modi.
+            Scared to destroy my project before my deadline, I mainly replaced some div's with 'section' blocks instead. The feedback also mentioned
+            me having my list-items in an div instead of an ul/ol - so I changed it, it's now WCAG proof! I fixed my labels & inputs not being
+            connected properly. Lastly aria-labels were added to all areas where applicable, mainly the menu logo, which redirects you to the home
+            page.
           </p>
         </div>
         <div class="container__bullets">
-          <h3 class="container__subtitle">Lorem, ipsum.</h3>
+          <h3 class="container__subtitle">Other</h3>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam reprehenderit nostrum temporibus placeat eligendi culpa quo possimus nobis
-            sequi, quaerat, laudantium, blanditiis voluptatibus nam quae!
-          </p>
-        </div>
-        <div class="container__bullets">
-          <h3 class="container__subtitle">Lorem, ipsum dolor.</h3>
-          <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi voluptatum, quam quas id quos eveniet. Laboriosam nostrum culpa quia
-            doloremque? Dolores similique voluptatem sint aperiam quisquam reprehenderit laudantium delectus ex ut exercitationem, illo nobis
-            consequatur molestiae ad iure expedita culpa quae. Suscipit repudiandae dignissimos, doloribus ratione nostrum quae, inventore deleniti
-            qui nulla, labore aut. Quas itaque aliquam nihil voluptates modi.
+            Error & success stylings have been selected through 'red' & 'green' stylings, then going into inspect tool to find closest color with
+            enough contrast. Font on contact form has been increased from 0.75 rem, to 1rem (16px). Scroll-behavior set to 'smooth', for a smoother
+            experience. :rubberduck:
           </p>
         </div>
       </section>
       <div class="container__bottom">
-        <a href="https://gamehub.dennisl.no" target="_blank" rel="noreferrer">View website</a>
-        <a href="https://github.com/dotDennis/Gamehub-2.0" target="_blank" rel="noreferrer">View source</a>
+        <a href="https://csm.dennisl.no" target="_blank" rel="noreferrer">View website</a>
+        <a href="https://github.com/dotDennis/Semester-Project" target="_blank" rel="noreferrer">View source</a>
         <a href="/">Return home</a>
       </div>
     </main>

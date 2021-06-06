@@ -1,9 +1,9 @@
 :root {
   --primary: #212121;
-  --secondary: #ededec;
+  --secondary: #eee8df;
   --link: blue;
-  --accent: var(--primary);
-  --tone: var(--primary);
+  --accent: #272933;
+  --tone: #1d7464;
   --icon-primary: #ecbb36;
   --icon-secondary: #ffbc6b;
   --icon-secondary-opacity: 0.6;
@@ -11,6 +11,8 @@
   --weight-title: 700;
   --weight-paragraph: 400;
   --weight-lesser: 300;
+  --shadow: 0 0 5px var(--primary);
+  --opacity: 1;
 }
 
 :root.dark-mode {
@@ -23,6 +25,8 @@
   --icon-secondary: #7c36ec;
   --icon-secondary-opacity: 1;
   --weight-paragraph: 300;
+  --shadow: none;
+  --opacity: 0.85;
 }
 
 html {
@@ -56,7 +60,7 @@ body {
 header {
   display: flex;
   justify-content: space-between;
-  padding: 0 3rem;
+  padding: 0 5%;
   align-items: center;
   position: absolute;
   top: 1rem;
@@ -103,6 +107,7 @@ a {
   border: none;
   background: none;
   cursor: pointer;
+  max-width: 40px; /* magic number aligned to button width, to remove fontawesome icon content-shift (extremely large on load) before css is applied */
 }
 
 .switch {
@@ -125,10 +130,17 @@ a {
 }
 
 footer {
-  padding-top: 7rem;
+  padding-top: 5rem;
   text-align: center;
 }
 
 strong {
   color: var(--tone);
+}
+
+/* Make the header be fixed position on larger screens. Reason for this not being on mobile is that I do not want it to cover text and make it hard to read. */
+@media screen and (min-width: 1090px) {
+  header {
+    position: fixed;
+  }
 }
