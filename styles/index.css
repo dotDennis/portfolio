@@ -62,6 +62,25 @@
   justify-content: center;
 }
 
+div.title-name {
+  display: flex;
+  justify-content: center;
+}
+
+a.custom-link {
+  all: unset;
+  transition: transform 0.3s ease;
+}
+
+a.custom-link:hover {
+  cursor: pointer;
+  color: var(--link);
+  text-decoration: underline;
+  text-decoration-skip-ink: none;
+  transform: translateY(-7px);
+  transition: transform 0.3s ease;
+}
+
 /* to align the toggle button accordingly to project pages */
 header {
   justify-content: flex-end;

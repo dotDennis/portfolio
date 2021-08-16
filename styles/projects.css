@@ -68,6 +68,11 @@
   margin: 0 1rem 0 0;
 }
 
+.custom-image {
+  max-height: 600px;
+  object-fit: cover;
+}
+
 /* make sure the dark mode toggle never overlaps text. */
 
 @media screen and (min-width: 900px) {

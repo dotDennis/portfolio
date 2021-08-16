@@ -16,7 +16,7 @@
 }
 
 :root.dark-mode {
-  --primary: #ededec;
+  --primary: #eee8df;
   --secondary: #212121;
   --accent: #ffbc6b;
   --link: #ff846b;
@@ -71,7 +71,6 @@ header {
 h1 {
   font-size: 3rem;
   letter-spacing: 3px;
-  left: 50%;
   text-align: center;
   margin-top: 7rem;
   font-weight: var(--weight-title);
